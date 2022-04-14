@@ -9,13 +9,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button setAlarm = findViewById(R.id.button);
-    Button removeAlarm = findViewById(R.id.button2);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button setAlarm = (Button) findViewById(R.id.button);
 
         setAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,13 +26,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        removeAlarm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(MainActivity.this, SetDetails.class);
-                startActivity(in);
-            }
-        });
+
 
 
 
